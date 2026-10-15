@@ -1,0 +1,18 @@
+npm install
+npm install recharts
+
+/*
+cd backend
+npm install audit 
+npm install knex sqlite3
+npm install express
+npm install bcryptjs 
+npm install jsonwebtoken
+npm install path
+npm install express-session
+node server.js
+*/ 
+
+file:///C:/Users/mchir/OneDrive%20-%20Coll%C3%A8ge%20de%20Maisonneuve/true%20natation/index.html
+
+http://localhost:5173/

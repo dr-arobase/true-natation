@@ -1,0 +1,71 @@
+const knex = require('knex');
+const path = require('path');
+
+// Chemin du fichier SQLite (dans le dossier server)
+const DB_FILE = path.join(__dirname, 'basededonnees.sqlite3');
+
+const db = knex({
+  client: 'sqlite3',
+  connection: {
+    filename: DB_FILE,
+  },
+  useNullAsDefault: true,
+});
+
+async function creerLesTablesSiNecessaire() {
+  const tableUserExiste = await db.schema.hasTable('User');
+
+  if (!tableUserExiste) {
+    await db.schema.createTable('User', (table) => {
+      table.string('id').primary();
+      table.string('username').notNullable();
+      table.string('password').notNullable();
+      table.string('role').notNullable().defaultTo('user');
+      table.timestamp('created_at').defaultTo(db.fn.now());
+    });
+    console.log("Table 'User' créée");
+  }
+
+  // Seed admin si nécessaire
+  try {
+    const adminExists = await db('User').where({ role: 'admin' }).first();
+    if (!adminExists) {
+      const bcrypt = require('bcryptjs');
+      const crypto = require('crypto');
+      const password = process.env.ADMIN_PASSWORD || 'admin123';
+      const hashed = await bcrypt.hash(password, 10);
+
+      const adminUser = {
+        id: crypto.randomUUID(),
+        username: process.env.ADMIN_USER || 'admin',
+        password: hashed,
+        role: 'admin',
+      };
+      await db('User').insert(adminUser);
+      console.log('Admin seed créé (username:', adminUser.username, ')');
+    }
+  } catch (err) {
+    console.warn('Erreur lors du seed admin:', err.message || err);
+  }
+
+  const tableNageursExiste = await db.schema.hasTable('nageurs');
+
+  if (!tableNageursExiste) {
+    await db.schema.createTable('nageurs', (table) => {
+      table.string('id').primary();
+      table.string('nom').notNullable();
+      table.string('prenom').notNullable();
+      table.string('niveau').notNullable();
+      table.string('horaire').notNullable();
+      table.string('notes');
+      table.timestamp('created_at').defaultTo(db.fn.now());
+    });
+    console.log("Table 'nageurs' créée");
+  }
+}
+
+module.exports = {
+  db,
+  createTable: creerLesTablesSiNecessaire,
+  DB_FILE,
+};

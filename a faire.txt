@@ -1,0 +1,115 @@
+🧭 Menu principal (Accueil) 
+✅ Accéder aux groupes de natation
+
+🛟 Accéder aux groupes de sauvetage
+
+📊 Statistiques et rapports
+
+👤 Gestion de compte / Connexion
+
+🕐 Prochain cours à venir 
+
+🎨 Changer de thème (Clair / Sombre)
+
+🌐 Changer la langue (Français / Anglais)
+
+🔒 Déconnexion / Verrouiller l'écran
+
+🏊 Menu « Natation »
+Sections :
+📋 Liste des nageurs par groupe
+
+➕ Ajouter un nageur
+✏️ Modifier les informations
+
+🗑️ Supprimer un nageur
+
+🕓 Voir horaire du groupe
+
+📌 Marquer la présence
+
+📝 Évaluer les compétences
+
+🎖️ Attribuer un niveau ou diplôme
+
+📤 Exporter groupe en PDF / CSV
+
+📈 Voir progression par élève
+
+📚 Accès aux historiques
+
+🧑‍🏫 Assignation de moniteur
+
+🗂️ Filtrer par jour, heure, niveau
+
+🛟 Menu « Sauvetage »
+Sections :
+📋 Voir liste des participants
+
+🔥 Inscription à un test (Bronze / Silver / Or)
+
+📄 Télécharger formulaire de consentement
+
+📝 Ajouter note d’examen pratique / théorique
+
+🎓 Valider une réussite
+
+📅 Voir calendrier des tests
+
+📦 Gérer le matériel de sauvetage
+
+🕵️ Suivi des présences / retards
+
+📊 Menu « Statistiques »
+📈 Progression des nageurs (graphique)
+
+📉 Taux d'assiduité par groupe
+
+🧮 Taux de réussite par niveau
+
+🗓️ Historique de participation par session
+
+👥 Statistiques par moniteur
+
+📂 Exportation des stats (.csv, .pdf, etc.)
+
+👤 Menu « Compte utilisateur »
+👨‍🏫 Changer mot de passe
+
+🧑‍💼 Créer compte moniteur / admin
+
+🧾 Voir journal de connexion
+
+📥 Importer liste d’élèves
+
+👀 Mode superviseur : voir tout
+
+🛠️ Paramètres personnalisés (notification, couleurs, etc.)
+
+⚙️ Menu « Admin / Paramètres »
+🔐 Définir les rôles et permissions
+
+📂 Sauvegarder/Restaurer base de données
+
+📤 Exporter tous les dossiers
+
+🧪 Ajouter un cours test temporaire
+
+📬 Envoyer message aux moniteurs
+
+⏱️ Planifier les horaires automatiquement
+
+🚦 Activer/désactiver un groupe
+
+🧪 Menu « Outils avancés »
+🔎 Recherche avancée : par nom, date, groupe, niveau
+
+⏳ Afficher le temps restant avant la fin de session
+
+🔔 Gérer rappels et alertes (ex: 3 absences)
+
+🎫 Générer des certificats
+
+📸 Ajouter photo au profil nageur
+
+🧭 Mode plan de cours (checklist de compétence)
